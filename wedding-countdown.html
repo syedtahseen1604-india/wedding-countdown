@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Tahseen ❤️ Naaz Wedding Countdown</title>
+
+<style>
+
+body{
+background:#ffe6ea;
+font-family:Arial;
+text-align:center;
+padding-top:80px;
+}
+
+h1{
+color:#d81b60;
+font-size:40px;
+}
+
+#timer{
+font-size:45px;
+color:#c2185b;
+margin-top:30px;
+}
+
+p{
+font-size:20px;
+color:#444;
+}
+
+.footer{
+margin-top:40px;
+font-size:22px;
+color:#c2185b;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Tahseen ❤️ Naaz</h1>
+
+<p>Our Wedding Countdown</p>
+
+<div id="timer"></div>
+
+<p>2 October 2026 💍</p>
+
+<div class="footer">
+
+With Love ❤️  
+<br>
+Syed Tahseen
+
+</div>
+
+<script>
+
+var weddingDate = new Date("Oct 2, 2026 00:00:00").getTime();
+
+var x = setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = weddingDate - now;
+
+var days = Math.floor(distance/(1000*60*60*24));
+var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+var seconds = Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("timer").innerHTML =
+days + " Days " + hours + " Hours " + minutes + " Minutes " + seconds + " Seconds";
+
+},1000);
+
+</script>
+
+</body>
+
+</html> 
